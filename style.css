@@ -4,7 +4,7 @@
     --color-tan: #ecdfcc;
     --color-orange: #da8359;
     --color-black: #282828;
-
+    --color-gray: #c8c8c85f;
 
 }
 
@@ -19,18 +19,29 @@ body {
     grid-template-columns: 1fr 4fr;
 }
 
+
 .sidebar {
     background-color: var(--color-green);
     height: 100vh;
     padding: 1.5rem;
     color: var(--color-white);
-
+    
     display: grid;
 }
 
-.nav {
-    /* display: grid; */
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+}
 
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.nav-icons {
+    width: 20px;
+    color: var(--color-white);
 }
 
 .main {
@@ -41,7 +52,49 @@ body {
 
 .header {
     background-color: var(--color-white);
-    box-shadow: 0px 5px 5px lightgray;
+    box-shadow: 0px 5px 5px var(--color-gray);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 40px;
+}
+
+.header .row:first-of-type {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-icon, .notification-icon {
+    width: 25px;
+    color: var(--color-black);
+}
+
+input {
+    height: 25px;
+    width: 80%;
+    border-radius: 7px;
+    border: none;
+    background-color: var(--color-gray);
+    color: var(--color-black);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-picture {
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    background-color: var(--color-gray);
 }
 
 .content {
@@ -67,7 +120,7 @@ body {
 .cards {
     background-color: var(--color-white);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px lightgray;
+    box-shadow: 5px 5px 5px var(--color-gray);
     border-left: 10px solid var(--color-orange);
 }
 
@@ -84,7 +137,7 @@ body {
 .announcements-card {
     background-color: var(--color-white);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px lightgray;
+    box-shadow: 5px 5px 5px var(--color-gray);
 }
 
 .trending-title {
@@ -94,5 +147,5 @@ body {
 .trending-card {
     background-color: var(--color-white);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px lightgray;
+    box-shadow: 5px 5px 5px var(--color-gray);
 }
